@@ -45,10 +45,9 @@
 
         background-color: rgb(34, 29, 29);
     }
+	
 
-    .contain {
-        padding: 20px 500px;
-    }
+    
 </style>
 
 <head>
@@ -77,6 +76,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
@@ -105,7 +105,7 @@
         <div>
             <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
-                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Notification</button>
+                    <button style="font-size:24px;color:white;background-color:Transparent;border:none"> <i class="fa fa-bell"></i></button>
                 </li>
             </ul>
         </div>
@@ -309,8 +309,8 @@
                                 </label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+							
+					</form>
                 </div>
 
             </main>
@@ -319,14 +319,7 @@
 
 
 
-    <!-- Footer part -->
-    <footer class="footer mt-auto py-1 bg-dark">
-        <div class="contain">
-            <center><span class="text-muted">@Event Managment System @2020</span></center>
-            <center><span class="text-muted">Developed By- Shivam Raj, Madhusudan Anand, Abhineet Mishra</span>
-            </center>
-        </div>
-    </footer>
+    
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -344,8 +337,48 @@
     <script>
         feather.replace()
     </script>
-        
-        
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                datasets: [{
+                    data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                    lineTension: 0,
+                    backgroundColor: 'transparent',
+                    borderColor: '#007bff',
+                    borderWidth: 4,
+                    pointBackgroundColor: '#007bff'
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false
+                        }
+                    }]
+                },
+                legend: {
+                    display: false,
+                }
+            }
+        });
+    </script>
+
+	<!-- Footer part -->
+    <footer class="footer mt-auto py-1 bg-dark">
+        <div class="contain">
+            <center><span class="text-muted">@Event Managment System @2020</span></center>
+            <center><span class="text-muted">Developed By- Shivam Raj, Madhusudan Anand, Abhineet Mishra</span>
+            </center>
+        </div>
+    </footer>
+	
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
